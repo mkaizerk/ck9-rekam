@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — CK9 Rekam</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 24px; color: #333; line-height: 1.7; }
+    h1 { color: #16B3AC; }
+    h2 { color: #0D8F89; margin-top: 32px; }
+    p, li { margin: 8px 0; }
+    ul { padding-left: 20px; }
+    .last-updated { color: #888; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy — CK9 Rekam</h1>
+  <p class="last-updated">Last updated: June 10, 2026</p>
+
+  <h2>1. Overview</h2>
+  <p>
+    CK9 Rekam ("the Extension") is a Chrome browser extension that records health screening form responses
+    and automatically re-fills them on subsequent visits. This Privacy Policy explains what data the
+    Extension collects, how it is used, and how it is stored.
+  </p>
+
+  <h2>2. Data We Collect</h2>
+  <p>The Extension collects and stores the following data <strong>locally on your device only</strong>:</p>
+  <ul>
+    <li><strong>Form field values</strong> — answers you manually fill in health screening forms and choose
+        to record (e.g., radio button selections, numeric inputs, dropdown selections). These are stored
+        in Chrome's local storage on your device.</li>
+    <li><strong>Form title</strong> — the title of the form page, used as an identifier to match the
+        correct recording on future visits.</li>
+    <li><strong>Extension settings</strong> — whether auto-fill is enabled or disabled.</li>
+  </ul>
+  <p>The Extension does <strong>not</strong> collect:</p>
+  <ul>
+    <li>Personal identity information (name, date of birth, ID number, address, etc.)</li>
+    <li>Browsing history or data from any other website</li>
+    <li>Medical records or patient data</li>
+    <li>Passwords or authentication credentials</li>
+  </ul>
+
+  <h2>3. How Data Is Used</h2>
+  <p>
+    All recorded data is used solely to pre-fill form fields when you revisit a previously recorded form page.
+    This reduces repetitive data entry for health workers and clinic staff.
+  </p>
+
+  <h2>4. Data Storage and Sharing</h2>
+  <ul>
+    <li>All data is stored locally using Chrome's <code>chrome.storage.local</code> API.</li>
+    <li>No data is transmitted to any external server, third party, or remote service.</li>
+    <li>No data is shared with any person or organization.</li>
+    <li>Data can be deleted at any time using the "Hapus Semua" button in the Extension popup,
+        or by uninstalling the Extension.</li>
+  </ul>
+
+  <h2>5. Permissions Justification</h2>
+  <ul>
+    <li><strong>storage</strong> — Used to save recorded form values and extension settings locally
+        on your device via <code>chrome.storage.local</code>.</li>
+    <li><strong>activeTab</strong> — Used to inject the recording and auto-fill script into the
+        currently active tab when visiting the supported health screening portal.</li>
+    <li><strong>tabs</strong> — Used to query the currently active tab's ID so the Extension popup
+        can communicate with the content script on the active page (to start/stop recording).
+        No browsing history or data from other tabs is accessed or stored.</li>
+  </ul>
+  <p>
+    The Extension's content scripts are restricted exclusively to pages matching
+    <code>*://form.kemkes.go.id/*</code>. The Extension has no access to any other website.
+  </p>
+
+  <h2>6. Children's Privacy</h2>
+  <p>
+    This Extension is designed for use by healthcare workers and is not directed at children.
+    It does not knowingly collect information from children under 13 years of age.
+  </p>
+
+  <h2>7. Changes to This Policy</h2>
+  <p>
+    If this Privacy Policy is updated, the new version will be made available at the same URL.
+    Continued use of the Extension after any changes constitutes acceptance of the updated policy.
+  </p>
+
+  <h2>8. Contact</h2>
+  <p>
+    If you have any questions about this Privacy Policy, please contact:
+    <strong>iaxappmail@gmail.com</strong>
+  </p>
+</body>
+</html>
