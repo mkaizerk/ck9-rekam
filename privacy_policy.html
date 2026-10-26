@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — CK9 Rekam</title>
+  <title>Privacy Policy — CK9 Autofill</title>
   <style>
     body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 24px; color: #333; line-height: 1.7; }
     h1 { color: #16B3AC; }
@@ -14,14 +14,15 @@
   </style>
 </head>
 <body>
-  <h1>Privacy Policy — CK9 Rekam</h1>
-  <p class="last-updated">Last updated: June 10, 2026</p>
+  <h1>Privacy Policy — CK9 Autofill</h1>
+  <p class="last-updated">Last updated: October 26, 2026</p>
 
   <h2>1. Overview</h2>
   <p>
-    CK9 Rekam ("the Extension") is a Chrome browser extension that records health screening form responses
-    and automatically re-fills them on subsequent visits. This Privacy Policy explains what data the
-    Extension collects, how it is used, and how it is stored.
+    CK9 Autofill ("the Extension") is a Chrome browser extension that helps health workers fill forms on the
+    Ministry of Health form portal. It records form responses and re-fills them on later visits, and it can fill
+    forms from templates included in the Extension. This Privacy Policy explains what data the Extension collects,
+    how it is used, and how it is stored.
   </p>
 
   <h2>2. Data We Collect</h2>
@@ -32,7 +33,8 @@
         in Chrome's local storage on your device.</li>
     <li><strong>Form title</strong> — the title of the form page, used as an identifier to match the
         correct recording on future visits.</li>
-    <li><strong>Extension settings</strong> — whether auto-fill is enabled or disabled.</li>
+    <li><strong>Extension settings</strong> — whether auto-fill is enabled or disabled, the last opened
+        side panel tab, and the template list view.</li>
   </ul>
   <p>The Extension does <strong>not</strong> collect:</p>
   <ul>
@@ -42,9 +44,18 @@
     <li>Passwords or authentication credentials</li>
   </ul>
 
+  <h3>Form templates</h3>
+  <ul>
+    <li>Templates are included in the Extension package and contain no personal data.</li>
+    <li>To fill a form from a template, the Extension reads only the form's questions and answer choices.
+        It does not store the answers it fills in.</li>
+    <li>If the user chooses, the Extension can also press the form's submit button. The form is then sent only
+        to the portal itself, as if the user had pressed the button.</li>
+  </ul>
+
   <h2>3. How Data Is Used</h2>
   <p>
-    All recorded data is used solely to pre-fill form fields when you revisit a previously recorded form page.
+    Recorded data and templates are used solely to fill form fields on the portal when the user asks the Extension to.
     This reduces repetitive data entry for health workers and clinic staff.
   </p>
 
@@ -53,7 +64,7 @@
     <li>All data is stored locally using Chrome's <code>chrome.storage.local</code> API.</li>
     <li>No data is transmitted to any external server, third party, or remote service.</li>
     <li>No data is shared with any person or organization.</li>
-    <li>Data can be deleted at any time using the "Hapus Semua" button in the Extension popup,
+    <li>Data can be deleted at any time using the "Hapus Semua" button in the Extension side panel,
         or by uninstalling the Extension.</li>
   </ul>
 
@@ -61,11 +72,11 @@
   <ul>
     <li><strong>storage</strong> — Used to save recorded form values and extension settings locally
         on your device via <code>chrome.storage.local</code>.</li>
-    <li><strong>activeTab</strong> — Used to inject the recording and auto-fill script into the
-        currently active tab when visiting the supported health screening portal.</li>
-    <li><strong>tabs</strong> — Used to query the currently active tab's ID so the Extension popup
-        can communicate with the content script on the active page (to start/stop recording).
-        No browsing history or data from other tabs is accessed or stored.</li>
+    <li><strong>activeTab</strong> — Allows the Extension to work with the form open in the current tab
+        when the user uses the Extension.</li>
+    <li><strong>tabs</strong> — Used to identify the active tab so the Extension's side panel can work with
+        the form open on that page. No browsing history or data from other tabs is accessed or stored.</li>
+    <li><strong>sidePanel</strong> — Used to show the Extension's interface in Chrome's side panel.</li>
   </ul>
   <p>
     The Extension's content scripts are restricted exclusively to pages matching
